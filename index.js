@@ -5,7 +5,6 @@ const pathToFile = path.join(__dirname, 'commentsTest.js');
 
 const clearComments = (data) => {
     const regEx = /(\/\/.*)|(\/\*[.\s\S]*?\*\/)/gm;
-    data.indexOf('//')
     let res = data.replace(regEx, '');
     fs.writeFile(pathToFile, res, err => {
         if (err) throw new Error;
